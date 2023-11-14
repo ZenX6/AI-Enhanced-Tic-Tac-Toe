@@ -1,0 +1,89 @@
+body {
+    background-color: #add8e6; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px); /* 3 columns, each 200px wide */
+    grid-template-rows: repeat(3, 200px); /* 3 rows, each 200px tall */
+    gap: 10px; /* Space between cells */
+  }
+  
+  .cell {
+    background-color: #fff; /* White background for cells */
+    border: 5px solid #000; /* Black border for cells */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000; /* Black color for the text */
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    font-family: 'Arial Rounded MT Bold', sans-serif; /* This is a rounder font */
+    font-size: 3em; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+  }
+  
+  /* Optional: add a transition effect for the hover state */
+  .cell:hover {
+    background-color: #e4e4e4;
+    transition: background-color 0.3s;
+  }
+  
+  #top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Assuming the game board is 600px wide */
+    margin: 0 auto 20px; /* Center the container and add margin below */
+  }
+  
+  #scores {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  
+  #score-x,
+  #score-o {
+    color: #d955d9; /* Light purple color */
+    font-size: 2em; /* Larger font size */
+    margin: 0 10px; /* Add some margin for spacing */
+    text-align: center; /* Center the text */
+  }
+  #reset-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-bottom: 20px; /* Add some space below the button */
+  }
+  
+  #reset-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px; /* Add some horizontal spacing */
+  }
+  
+  /* Additional styles for hover effect on the button */
+  #reset-button:hover {
+    background-color: #e4e4e4;
+    transition: background-color 0.3s;
+  }
+  
+  /* Ensure the game board is centered */
+  #game-board {
+    margin: auto;
+    /* Rest of your styles for game board */
+  }
+  
